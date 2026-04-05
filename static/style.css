@@ -1,0 +1,263 @@
+:root {
+    --blue: #003087;
+}
+
+body {
+    background: #f4f6fb;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+
+.site-header {
+    background: var(--blue);
+    color: #fff;
+    padding: 14px 0;
+}
+
+.site-header .logo {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.site-header .sub {
+    font-size: .75rem;
+    opacity: .8;
+}
+
+
+.card-block {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.08);
+    padding: 20px 24px;
+    margin-top: 20px;
+}
+
+
+.week-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.week-nav button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--blue);
+    font-weight: 600;
+    font-size: .95rem;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+.week-nav button:hover {
+    background: #e8eef8;
+}
+
+.week-nav button:disabled {
+    opacity: .35;
+    cursor: default;
+}
+
+.week-nav .center {
+    text-align: center;
+}
+
+.week-nav .center .wnum {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--blue);
+}
+
+.week-nav .center .wdate {
+    font-size: .8rem;
+    color: #888;
+}
+
+
+.weekday-nav {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    padding: 4px 0;
+}
+
+.weekday-nav button {
+    flex: 1;
+    min-width: 52px;
+    text-align: center;
+    padding: 8px 4px;
+    border-radius: 8px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.weekday-nav button:hover {
+    background: #e8eef8;
+}
+
+.weekday-nav button.active {
+    background: var(--blue);
+    color: #fff;
+}
+
+.wd-name {
+    font-size: .7rem;
+    text-transform: uppercase;
+    opacity: .7;
+}
+
+.wd-date {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: .82rem;
+    color: #444;
+}
+
+.legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+}
+
+
+.info-title {
+    color: var(--blue);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.info-desc {
+    color: #555;
+    font-size: .9rem;
+}
+
+
+.schedule-wrap {
+    overflow-x: auto;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+}
+
+.schedule-table th {
+    background: var(--blue);
+    color: #fff;
+    padding: 10px 12px;
+    font-size: .85rem;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.schedule-table th .dn {
+    font-size: .95rem;
+}
+
+.schedule-table th .dd {
+    font-size: .75rem;
+    opacity: .8;
+}
+
+.schedule-table td {
+    border: 1px solid #e8eef8;
+    padding: 8px;
+    vertical-align: top;
+    min-width: 130px;
+}
+
+.schedule-table td.time-cell {
+    text-align: center;
+    font-size: .8rem;
+    color: #666;
+    white-space: nowrap;
+    background: #f8f9fc;
+    font-weight: 600;
+    min-width: 80px;
+}
+
+
+.lesson {
+    border-radius: 7px;
+    padding: 8px 10px;
+    margin-bottom: 6px;
+    border-left: 4px solid transparent;
+    font-size: .82rem;
+}
+
+.lesson:last-child {
+    margin-bottom: 0;
+}
+
+.lesson-name {
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 3px;
+}
+
+.lesson-meta {
+    color: #666;
+}
+
+.lesson-badge {
+    display: inline-block;
+    font-size: .7rem;
+    padding: 1px 7px;
+    border-radius: 10px;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+
+.lt-1 { background: #e8f0fe; border-left-color: #4285f4; }
+.lt-1 .lesson-badge { background: #4285f4; color: #fff; }
+
+.lt-2 { background: #fce8e6; border-left-color: #ea4335; }
+.lt-2 .lesson-badge { background: #ea4335; color: #fff; }
+
+.lt-3 { background: #e6f4ea; border-left-color: #34a853; }
+.lt-3 .lesson-badge { background: #34a853; color: #fff; }
+
+.lt-4 { background: #fef7e0; border-left-color: #fbbc04; }
+.lt-4 .lesson-badge { background: #fbbc04; color: #333; }
+
+.lt-5 { background: #f3e8fd; border-left-color: #9c27b0; }
+.lt-5 .lesson-badge { background: #9c27b0; color: #fff; }
+
+.lt-6 { background: #e0f7fa; border-left-color: #00bcd4; }
+.lt-6 .lesson-badge { background: #00bcd4; color: #fff; }
+
+.lt-8 { background: #fff3e0; border-left-color: #ff9800; }
+.lt-8 .lesson-badge { background: #ff9800; color: #fff; }
+
+
+#empty-msg {
+    display: none;
+    text-align: center;
+    padding: 40px;
+    color: #aaa;
+}
+
+
+@media (max-width: 768px) {
+    .card-block { padding: 14px; }
+    .schedule-table { min-width: 500px; }
+}

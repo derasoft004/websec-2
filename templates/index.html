@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Расписание — Самарский университет</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="logo"><i class="mdi mdi-school"></i> Самарский университет</div>
+    <div class="sub">Расписание занятий</div>
+  </div>
+</header>
+
+<div class="container pb-5">
+
+  <div id="info-block" class="card-block" style="display:none">
+    <h2 id="info-title" class="info-title"></h2>
+    <div id="info-desc" class="info-desc"></div>
+  </div>
+
+  <div id="week-block" class="card-block" style="display:none">
+    <div class="week-nav">
+      <button id="btn-prev" disabled><i class="mdi mdi-chevron-left"></i> <span id="lbl-prev"></span></button>
+      <div class="center">
+        <div class="wnum" id="week-num"></div>
+        <div class="wdate" id="week-date"></div>
+      </div>
+      <button id="btn-next" disabled><span id="lbl-next"></span> <i class="mdi mdi-chevron-right"></i></button>
+    </div>
+    <div class="weekday-nav mt-3" id="weekday-nav"></div>
+    <div class="legend mt-3">
+      <div class="legend-item"><span class="legend-dot" style="background:#4285f4"></span> Лекция</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#ea4335"></span> Лабораторная</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#34a853"></span> Практика</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#fbbc04"></span> Другое</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#9c27b0"></span> Экзамен</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#ff9800"></span> Зачёт</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#00bcd4"></span> Консультация</div>
+    </div>
+  </div>
+
+  <div id="empty-msg"><i class="mdi mdi-calendar-blank mdi-36px"></i><br>Нет занятий на этой неделе</div>
+
+  <div id="schedule-wrap" class="card-block schedule-wrap" style="display:none">
+    <table class="schedule-table">
+      <thead id="schedule-head"></thead>
+      <tbody id="schedule-body"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>
